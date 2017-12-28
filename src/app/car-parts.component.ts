@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'car-parts',
-  templateUrl: './car-parts.component.html'
+  templateUrl: './car-parts.component.html',
+  styleUrls: ['./car-parts.component.css']
+
 })
 export class CarPartsComponent {
   title = 'Welcome to racing';
