@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'car-parts',
+  templateUrl: './car-parts.component.html'
 })
-export class AppComponent {
+export class CarPartsComponent {
   title = 'Welcome to racing';
-/*
   carParts = [{
     id: 1,
     name: 'Super tires',
@@ -41,5 +39,4 @@ export class AppComponent {
     }
     return sum;
   }
-  */
 }

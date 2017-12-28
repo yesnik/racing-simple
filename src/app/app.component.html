@@ -2,15 +2,4 @@
 
 <h1>{{ title }}</h1>
 
-<p>Total parts in stock: {{ totalCarParts() }}</p>
-
-<ul>
-  <li *ngFor="let carPart of carParts">
-    <b>{{ carPart.name | uppercase }}</b>
-    <p>{{ carPart.description }}</p>
-    <p *ngIf="carPart.inStock > 0">Left in stock: {{ carPart.inStock }}</p>
-    <p *ngIf="carPart.inStock === 0">Out of stock</p>
-    <p>Price: {{ carPart.price | currency:'EUR' }}</p>
-    <p>Updated on: {{ carPart.updatedOn | date }}</p>
-  </li>
-</ul>
+<car-parts></car-parts>
