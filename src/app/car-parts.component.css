@@ -38,6 +38,10 @@
   border: 1px solid #7b6c98;
 }
 
+.items li.featured {
+  background: #253bb9;
+}
+
 .title {
   color: #57ff00;
   text-shadow: 1px 1px #301a6c;

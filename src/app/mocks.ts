@@ -7,7 +7,8 @@ export const CARPARTS: CarPart[] = [{
     inStock: 0,
     price: 5.34,
     updatedOn: '2017-11-25',
-    image: '/assets/images/1.jpg'
+    image: '/assets/images/1.jpg',
+    featured: false
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ export const CARPARTS: CarPart[] = [{
     inStock: 22,
     price: 10.2,
     updatedOn: '2017-01-15',
-    image: '/assets/images/2.jpg'
+    image: '/assets/images/2.jpg',
+    featured: true
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const CARPARTS: CarPart[] = [{
     inStock: 7,
     price: 28.0,
     updatedOn: '2017-05-21',
-    image: '/assets/images/3.jpg'
+    image: '/assets/images/3.jpg',
+    featured: false
   }
 ]; 

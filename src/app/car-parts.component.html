@@ -1,9 +1,9 @@
 <p class="total">Total parts in stock: {{ totalCarParts() }}</p>
 
 <ul class="items">
-  <li *ngFor="let carPart of carParts">
+  <li *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
     <div class="image">
-      <img [alt]="image.description" [src]="carPart.image" />
+      <img [src]="carPart.image" [alt]="carPart.description" />
     </div>
     <div class="info">
       <p class="title">{{ carPart.name | uppercase }}</p>
