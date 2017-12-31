@@ -1,12 +1,18 @@
-<p>Total parts in stock: {{ totalCarParts() }}</p>
+<p class="total">Total parts in stock: {{ totalCarParts() }}</p>
 
-<ul>
+<ul class="items">
   <li *ngFor="let carPart of carParts">
-    <b class="title">{{ carPart.name | uppercase }}</b>
-    <p class="description">{{ carPart.description }}</p>
-    <p *ngIf="carPart.inStock > 0">Left in stock: {{ carPart.inStock }}</p>
-    <p *ngIf="carPart.inStock === 0">Out of stock</p>
-    <p>Price: {{ carPart.price | currency:'EUR' }}</p>
-    <p>Updated on: {{ carPart.updatedOn | date }}</p>
+    <div class="image">
+      <img [alt]="image.description" [src]="carPart.image" />
+    </div>
+    <div class="info">
+      <p class="title">{{ carPart.name | uppercase }}</p>
+      <p class="description">{{ carPart.description }}</p>
+      <p>Price: {{ carPart.price | currency:'EUR' }}</p>
+      <p>Updated on: {{ carPart.updatedOn | date }}</p>
+      <p class="amount" *ngIf="carPart.inStock > 0">Left in stock: {{ carPart.inStock }}</p>
+      <p class="amount" *ngIf="carPart.inStock === 0">Out of stock</p>
+    </div>
+
   </li>
 </ul>

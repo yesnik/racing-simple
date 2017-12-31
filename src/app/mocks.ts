@@ -6,7 +6,8 @@ export const CARPARTS: CarPart[] = [{
     description: 'Some description for tires',
     inStock: 0,
     price: 5.34,
-    updatedOn: '2017-11-25'
+    updatedOn: '2017-11-25',
+    image: '/assets/images/1.jpg'
   },
   {
     id: 2,
@@ -14,7 +15,8 @@ export const CARPARTS: CarPart[] = [{
     description: 'They will help you even on absolutely iced road',
     inStock: 22,
     price: 10.2,
-    updatedOn: '2017-01-15'
+    updatedOn: '2017-01-15',
+    image: '/assets/images/2.jpg'
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const CARPARTS: CarPart[] = [{
     description: 'Booletprolf windshield for your super fast car',
     inStock: 7,
     price: 28.0,
-    updatedOn: '2017-05-21'
+    updatedOn: '2017-05-21',
+    image: '/assets/images/3.jpg'
   }
 ]; 
