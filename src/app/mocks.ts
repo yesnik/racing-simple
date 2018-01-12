@@ -8,17 +8,19 @@ export const CARPARTS: CarPart[] = [{
     price: 5.34,
     updatedOn: '2017-11-25',
     image: '/assets/images/1.jpg',
-    featured: false
+    featured: false,
+    quantity: 0
   },
   {
     id: 2,
     name: 'Super breaks',
     description: 'They will help you even on absolutely iced road',
-    inStock: 22,
+    inStock: 3,
     price: 10.2,
     updatedOn: '2017-01-15',
     image: '/assets/images/2.jpg',
-    featured: true
+    featured: true,
+    quantity: 0
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const CARPARTS: CarPart[] = [{
     price: 28.0,
     updatedOn: '2017-05-21',
     image: '/assets/images/3.jpg',
-    featured: false
+    featured: false,
+    quantity: 0
   }
 ]; 

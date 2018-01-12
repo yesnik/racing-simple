@@ -1,18 +1,33 @@
 <p class="total">Total parts in stock: {{ totalCarParts() }}</p>
 
 <ul class="items">
-  <li *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
-    <div class="image">
-      <img [src]="carPart.image" [alt]="carPart.description" />
-    </div>
-    <div class="info">
-      <p class="title">{{ carPart.name | uppercase }}</p>
-      <p class="description">{{ carPart.description }}</p>
-      <p>Price: {{ carPart.price | currency:'EUR' }}</p>
-      <p>Updated on: {{ carPart.updatedOn | date }}</p>
-      <p class="amount" *ngIf="carPart.inStock > 0">Left in stock: {{ carPart.inStock }}</p>
-      <p class="amount" *ngIf="carPart.inStock === 0">Out of stock</p>
+  <li class="item" *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
+    
+    <div class="left-block">
+      <img class="image" [src]="carPart.image" [alt]="carPart.description" />
     </div>
 
+    <div class="center-block">
+      <div class="title">{{ carPart.name | uppercase }}</div>
+      <div class="description">{{ carPart.description }}</div>
+      <div class="in-stock">
+        <span *ngIf="carPart.inStock > 0">Left in stock: {{ carPart.inStock }}</span>
+        <span *ngIf="carPart.inStock === 0">Out of stock</span>
+      </div>
+      <div class="updated">Updated on: {{ carPart.updatedOn | date }}</div>
+    </div>
+
+    <div class="right-block">
+      <div class="price-block">
+        <div (mouseover)="getCoordinates($event)" class="price">
+          {{ carPart.price | currency:'EUR' }}
+        </div>
+        <div class="amount-controls">
+          <button class="btn-quantity" type="button" (click)="downQuantity(carPart)">-</button>
+          <input (keyup)="showKey($event)" type="text" class="quantity" name="quantity" [value]="carPart.quantity">
+          <button class="btn-quantity" type="button" (click)="upQuantity(carPart)">+</button>
+        </div>
+      </div>
+    </div>
   </li>
 </ul>

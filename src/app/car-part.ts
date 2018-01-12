@@ -7,4 +7,5 @@ export class CarPart {
   updatedOn: string;
   image: string;
   featured: boolean;
+  quantity: number;
 }

@@ -23,4 +23,24 @@ export class CarPartsComponent {
     }
     return sum;
   }
+
+  upQuantity(carPart) {
+    if (carPart.quantity < carPart.inStock) {
+      carPart.quantity += 1;
+    }
+  }
+
+  downQuantity(carPart) {
+    if (carPart.quantity > 0) {
+      carPart.quantity -= 1;
+    }
+  }
+
+  showKey(event) {
+    alert(event.keyCode);
+  }
+
+  getCoordinates(event) {
+    console.log(event.clientX + ' ' + event.clientY);
+  }
 }
