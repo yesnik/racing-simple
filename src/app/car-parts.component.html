@@ -24,7 +24,10 @@
         </div>
         <div class="amount-controls">
           <button class="btn-quantity" type="button" (click)="downQuantity(carPart)">-</button>
-          <input (keyup)="showKey($event)" type="text" class="quantity" name="quantity" [value]="carPart.quantity">
+          <input 
+            (keyup)="showKey($event)" 
+            [(ngModel)]="carPart.quantity"
+            type="text" class="quantity" name="quantity" [value]="carPart.quantity">
           <button class="btn-quantity" type="button" (click)="upQuantity(carPart)">+</button>
         </div>
       </div>
