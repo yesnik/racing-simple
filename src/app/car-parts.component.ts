@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CarPart } from './car-part';
-import { CARPARTS } from './mocks';
+import { RacingDataService } from './racing-data.service'
 
 @Component({
   selector: 'car-parts',
@@ -13,8 +13,10 @@ export class CarPartsComponent {
   carParts: CarPart[];
 
   ngOnInit() {
-    this.carParts = CARPARTS;
+    this.carParts = this.racingDataService.getCarParts();
   }
+
+  constructor(private racingDataService: RacingDataService) {}
 
   totalCarParts() {
     let sum = 0;
