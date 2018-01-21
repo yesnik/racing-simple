@@ -76,6 +76,10 @@
   margin: 0;
 }
 
+.total {
+  color: #eee;
+}
+
 .updated {
   color: #627777;
   margin-top: 20px;

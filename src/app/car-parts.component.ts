@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CarPart } from './car-part';
-import { RacingDataService } from './racing-data.service'
+import { RacingDataService } from './racing-data.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'car-parts',
@@ -13,13 +14,22 @@ export class CarPartsComponent {
   carParts: CarPart[];
 
   ngOnInit() {
-    this.carParts = this.racingDataService.getCarParts();
+    this.racingDataService.getCarParts().
+      subscribe(response => this.carParts = response.data);
   }
 
-  constructor(private racingDataService: RacingDataService) {}
+  constructor(
+    private racingDataService: RacingDataService,
+    private http: HttpClient
+  ) {}
 
   totalCarParts() {
     let sum = 0;
+
+    if (!this.carParts) {
+      return 0;
+    }
+
     for(let carPart of this.carParts) {
       sum += carPart.inStock;
     }
